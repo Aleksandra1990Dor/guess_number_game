@@ -11,10 +11,6 @@ let getNum;
 let previousNum = '';
 let counter = 1;
 input.focus();
-function reload() {
-  location.reload();
-  return false;
-}
 function gameOver() {
   button.disabled = true;
   reset.className = 'reset-loose btn';
@@ -36,7 +32,7 @@ function resetGame() {
   input.focus();
 }
 
-function checkNumber() {
+function checkNumber(event) {
   event.preventDefault();
   getNum = Number(input.value);
 
