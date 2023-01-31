@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 43.75%;
+  }
+}
+@media (max-width: 375px) {
+  html {
+    font-size: 37.5%;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input {
+  -moz-appearance: textfield;
+}
+
+input:hover,
+input:focus {
+  -moz-appearance: number-input;
+}
+
+body {
+  background-color: lightsalmon;
+  padding: 3rem;
+}
+
+.header__title {
+  font-size: 5rem;
+}
+
+.game {
+  width: 90%;
+  margin: 0 auto;
+  color: rgb(58, 57, 57);
+  text-align: center;
+  font-size: 2.5rem;
+}
+@media (max-width: 790px) {
+  .game {
+    width: 90%;
+  }
+}
+@media (max-width: 565px) {
+  .game {
+    width: 100%;
+  }
+  .game .game__label,
+.game .game__guess-area {
+    display: block;
+    margin-bottom: 2rem;
+  }
+}
+.game__description {
+  width: 80%;
+  margin: 0 auto;
+  font-weight: bold;
+}
+.game__guess-area {
+  border: none;
+  padding: 1.5rem 0;
+  border-radius: 3rem;
+  text-align: center;
+  font-size: 3rem;
+  margin: 0 2rem;
+  width: 40%;
+}
+.game__guess-area:focus {
+  outline: none !important;
+  -webkit-box-shadow: 2px 2px 6px rgb(27, 28, 29);
+          box-shadow: 2px 2px 6px rgb(27, 28, 29);
+}
+@media (min-width: 1024px) {
+  .game__guess-area {
+    width: 30%;
+  }
+}
+@media (max-width: 565px) {
+  .game__guess-area {
+    margin: 0 auto;
+    width: 80%;
+  }
+}
+.game__btn {
+  background-color: rgb(241, 149, 149);
+  color: rgb(44, 38, 38);
+  border: 1px solid rgb(107, 107, 116);
+}
+.game__btn_hidden {
+  display: none;
+}
+.game__results {
+  width: 80%;
+  margin: 0 auto;
+}
+.game #guess-counter,
+.game #result,
+.game #advice {
+  margin-bottom: 2.5rem;
+}
+
+.header,
+.game__description,
+.game__btn,
+.game__form,
+#guess-counter,
+#result,
+#advice {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 1.5rem;
+  font-size: 3rem;
+  -webkit-box-shadow: 2px 2px 6px rgb(150, 137, 137);
+          box-shadow: 2px 2px 6px rgb(150, 137, 137);
+  border-radius: 3rem;
+  font-weight: bold;
+}
+.btn:active {
+  -webkit-animation: main-btn 2s ease-out backwards;
+          animation: main-btn 2s ease-out backwards;
+}
+.btn:disabled {
+  cursor: auto;
+  -webkit-animation: none;
+          animation: none;
+  color: rgb(133, 133, 133);
+  border: none;
+}
+
+.success,
+.failed,
+.loose {
+  font-size: 4rem;
+  padding: 2rem;
+  font-weight: bold;
+  border-radius: 5rem;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+.success {
+  color: rgb(71, 30, 49);
+  background-color: rgb(106, 218, 106);
+  -webkit-box-shadow: 2px 2px 6px rgb(248, 182, 174);
+          box-shadow: 2px 2px 6px rgb(248, 182, 174);
+}
+
+.failed {
+  color: rgb(253, 214, 237);
+  background-color: rgb(187, 40, 40);
+}
+
+.loose {
+  font-size: 6rem;
+  background-color: rgb(255, 13, 13);
+  -webkit-box-shadow: 2px 2px 6px rgb(32, 32, 32);
+          box-shadow: 2px 2px 6px rgb(32, 32, 32);
+  color: bisque;
+  border-radius: 8rem;
+}
+
+.reset-loose {
+  background-color: rgb(182, 3, 3);
+  color: rgb(253, 243, 232);
+  -webkit-box-shadow: 2px 2px 6px rgb(32, 32, 32);
+          box-shadow: 2px 2px 6px rgb(32, 32, 32);
+}
+
+@-webkit-keyframes main-btn {
+  0% {
+    -webkit-transform: translateY(3%);
+            transform: translateY(3%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes main-btn {
+  0% {
+    -webkit-transform: translateY(3%);
+            transform: translateY(3%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Угадай число</title>
+    <link
+      href="css/style.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="fav/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="fav/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="fav/favicon-16x16.png"
+    />
+    <link
+      rel="manifest"
+      href="fav/site.webmanifest"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__title">Игра "Угадай число"</h1>
+    </header>
+    <main>
+      <section class="game">
+        <p class="game__description">
+          Мы загадали рандомное число между 1 и 100. Посмотрим, сможешь ли ты
+          угадать его за 10 попыток. Мы сообщим тебе был ли твой ответ меньше
+          или больше загаданного.
+        </p>
+        <form class="game__form">
+          <label
+            class="game__label"
+            for="guess"
+            >Введите число:</label
+          >
+          <input
+            class="game__guess-area"
+            type="number"
+            id="guess"
+          />
+          <button
+            class="game__btn btn"
+            id="submit"
+            type="submit"
+          >
+            Угадать
+          </button>
+        </form>
+        <div class="game__results">
+          <p id="guess-counter"></p>
+          <p id="result"></p>
+          <p id="advice"></p>
+        </div>
+        <button
+          id="reset"
+          type="reset"
+          class="game__btn_hidden btn"
+        >
+          Начать заново
+        </button>
+      </section>
+    </main>
+    <script src="js/main.js"></script>
+  </body>
+</html>
