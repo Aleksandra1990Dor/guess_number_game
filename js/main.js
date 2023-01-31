@@ -1,5 +1,4 @@
 let num = Math.floor(Math.random() * 100) + 1;
-
 const button = document.getElementById('submit');
 const result = document.getElementById('result');
 const guessCounter = document.getElementById('guess-counter');
@@ -34,7 +33,6 @@ function resetGame() {
 function checkNumber(event) {
   event.preventDefault();
   getNum = Number(input.value);
-
   previousNum += getNum + ' ';
   guessCounter.innerHTML = `Вы вводили: <b>${previousNum}</b>`;
   if (getNum === num) {
@@ -56,9 +54,7 @@ function checkNumber(event) {
     }
   }
   input.value = '';
-
   input.focus();
 }
-
 button.addEventListener('click', checkNumber);
 reset.addEventListener('click', resetGame);
