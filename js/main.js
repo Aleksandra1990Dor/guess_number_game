@@ -31,7 +31,6 @@ function resetGame() {
   num = Math.floor(Math.random() * 100) + 1;
   input.focus();
 }
-
 function checkNumber(event) {
   event.preventDefault();
   getNum = Number(input.value);
