@@ -98,11 +98,6 @@ body {
     z-index: 5;
     border-radius: 50%;
   }
-  #guess-counter,
-  #result,
-  #advice {
-    margin-bottom: 2.5rem;
-  }
 }
 .header,
 .game__description,
@@ -149,13 +144,12 @@ body {
   box-shadow: 2px 2px 6px rgb(82, 76, 76);
 }
 .failed {
-  &_animated {
-    animation: wrong 0.3s ease-out;
-  }
-
   color: rgb(253, 214, 237);
   background-color: rgb(187, 40, 40);
   box-shadow: 1px 1px 10px rgb(5, 5, 5);
+  &_animated {
+    animation: wrong 0.3s ease-out;
+  }
 }
 .loose {
   transition: 0.3s all;
