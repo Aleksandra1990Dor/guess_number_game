@@ -48,6 +48,7 @@ function checkNumber(event) {
     input.focus();
     return false;
   }
+  advice.style.color = '';
   previousNum += getNum + ' ';
   guessCounter.innerHTML = `Вы вводили: <b>${previousNum}</b>`;
   if (getNum === num) {
@@ -74,7 +75,6 @@ function checkNumber(event) {
       advice.innerHTML = 'Ваше число <b>больше</b> загаданного';
     }
   }
-
   input.value = '';
   input.focus();
 }
