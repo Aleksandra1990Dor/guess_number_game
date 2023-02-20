@@ -52,8 +52,12 @@ function checkNumber(event) {
   previousNum += getNum + ' ';
   guessCounter.innerHTML = `Вы вводили: <b>${previousNum}</b>`;
   if (getNum === num) {
+    document.querySelector('body').style.overflow = 'hidden';
     congrats.className = 'game__congrats';
     result.className = 'success';
+    setTimeout(() => {
+      document.querySelector('body').style.overflow = '';
+    }, 500);
     document.querySelector('body').style.backgroundColor = 'lightgreen';
     result.textContent = 'Поздравляю, вы справились с задачей!';
     gameOver();
@@ -66,9 +70,12 @@ function checkNumber(event) {
     counter++;
     result.className = 'failed failed_animated';
     result.textContent = 'Не угадали... :( Попробуйте еще раз.';
-    setTimeout(() => {
-      result.className = 'failed';
-    }, 500);
+    counter < 9
+      ? setTimeout(() => {
+          result.className = 'failed';
+        }, 500)
+      : false;
+
     if (getNum < num) {
       advice.innerHTML = 'Ваше число <b>меньше</b> загаданного';
     } else {

@@ -36,7 +36,6 @@ input:focus {
 body {
   background-color: lightsalmon;
   padding: 3rem;
-  overflow: hidden;
 }
 
 .header__title {
@@ -92,13 +91,16 @@ body {
 @media (max-width: 565px) {
   .game__guess-area {
     margin: 0 auto;
-    width: 80%;
+    width: 40%;
   }
 }
 .game__btn {
   background-color: rgb(241, 149, 149);
   color: rgb(44, 38, 38);
   border: 1px solid rgb(107, 107, 116);
+}
+.game__btn:hover {
+  background-color: rgb(223, 110, 110);
 }
 .game__btn_hidden {
   display: none;
@@ -114,7 +116,7 @@ body {
   position: absolute;
   height: 10%;
   width: 10%;
-  top: 60%;
+  top: 50%;
   left: 40%;
   background-color: rgb(255, 255, 255);
   z-index: 5;
@@ -142,6 +144,7 @@ body {
   font-weight: bold;
 }
 .btn:active {
+  opacity: 0.8;
   -webkit-animation: main-btn 2s ease-out backwards;
           animation: main-btn 2s ease-out backwards;
 }
@@ -152,11 +155,15 @@ body {
   color: rgb(133, 133, 133);
   border: none;
 }
+.btn:disabled:hover {
+  background-color: rgb(241, 149, 149);
+  opacity: 1;
+}
 
 .success,
 .failed,
 .loose {
-  font-size: 4rem;
+  font-size: 3.5rem;
   padding: 2rem;
   font-weight: bold;
   border-radius: 5rem;
@@ -202,6 +209,9 @@ body {
   color: rgb(253, 243, 232);
   -webkit-box-shadow: 2px 2px 6px rgb(32, 32, 32);
           box-shadow: 2px 2px 6px rgb(32, 32, 32);
+}
+.reset-loose:hover {
+  background-color: rgb(122, 11, 11);
 }
 
 .warning {
