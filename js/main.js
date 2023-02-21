@@ -34,18 +34,25 @@ function resetGame() {
   num = Math.floor(Math.random() * 100) + 1;
   input.focus();
 }
+function warning(textContent) {
+  advice.textContent = textContent;
+  advice.style.color = 'red';
+  advice.className = 'warning';
+  setTimeout(() => {
+    advice.className = '';
+  }, 500);
+  input.value = '';
+  input.focus();
+}
 function checkNumber(event) {
   event.preventDefault();
   getNum = Number(input.value);
-  if (getNum === 0 || getNum > 100) {
-    advice.textContent = 'Ваше число должно быть от 1 до 100!';
-    advice.style.color = 'red';
-    advice.className = 'warning';
-    setTimeout(() => {
-      advice.className = '';
-    }, 500);
-    input.value = '';
-    input.focus();
+  if (!Number.isInteger(getNum)) {
+    warning('Ваше число должно быть целым!');
+    return false;
+  }
+  if (Number.isInteger(getNum) && (getNum <= 0 || getNum > 100)) {
+    warning('Ваше число должно быть от 1 до 100!');
     return false;
   }
   advice.style.color = '';
